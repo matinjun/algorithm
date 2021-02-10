@@ -28,12 +28,12 @@ int main(int, char**) {
     std::vector<bool> visited(graph.getN(), false); 
     std::vector<int> d(graph.getN(), 0);
     std::vector<int> parent(graph.getN(), -1);
-    std::priority_queue<int> queue;
+    std::queue<int> queue;
 
     visited[0] = true;
     queue.push(0);
     while(!queue.empty()) {
-        int curNode = queue.top();
+        int curNode = queue.front();
         queue.pop();
         for(Node * adjNode = graph.adj[curNode]->getNxt(); 
             adjNode != nullptr; 
@@ -48,7 +48,7 @@ int main(int, char**) {
 
         }
     }
-    print_path(4, parent);
+    print_path(2, parent);
 
     return 0;
 }
