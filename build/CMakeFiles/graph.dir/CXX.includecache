@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/code/exp/algorithm/graph.hpp
+queue
+-
+vector
+-
+
+E:/code/exp/algorithm/main.cpp
+graph.hpp
+E:/code/exp/algorithm/graph.hpp
+iostream
+-
+
